@@ -41,12 +41,7 @@ function App() {
               cover={`${base}covers/crybaby.webp`}
             />
 
-            <Album
-              title="Cry Baby"
-              artist="Lil Peep"
-              position={[0, -2.4, 0]}
-              cover={`${base}covers/crybaby.webp`}
-            />
+          
           </Scroll>
         </ScrollControls>
       </Canvas>
