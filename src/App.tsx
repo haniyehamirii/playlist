@@ -9,7 +9,7 @@ function App() {
     <div className="h-screen w-screen">
       <Canvas
         className="bg-[#ffffff]"
-        camera={{ position: [3.4, 4, 6], fov: 45 }}
+        camera={{ position: [3.4, 4, 6], fov: 53 }}
       >
         <ambientLight intensity={1.5} />
 
