@@ -1,7 +1,6 @@
-import { Canvas, useThree } from "@react-three/fiber"
-import Album from "./components/Album"
-import { Scroll, ScrollControls } from "@react-three/drei"
-import Playlist from "./components/Playlist"
+import { Canvas} from "@react-three/fiber"
+import Playlist from "./feathers/playlist/Playlist"
+import Song from "./feathers/playlist/Song"
 
 function App() {
   const base = import.meta.env.BASE_URL
@@ -47,6 +46,7 @@ function App() {
   />
 </group>
       </Canvas>
+      <Song  />
     </div>
   )
 }

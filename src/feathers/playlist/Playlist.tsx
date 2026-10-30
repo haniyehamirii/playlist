@@ -1,6 +1,6 @@
 
 import { RoundedBox, useTexture } from "@react-three/drei"
-import { useThree } from "@react-three/fiber"
+
 
 type playlistProps = {
   position: [number, number, number]
