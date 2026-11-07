@@ -1,6 +1,6 @@
 import { Canvas} from "@react-three/fiber"
 import Playlist from "./feathers/playlist/Playlist"
-import Song from "./feathers/playlist/Song"
+
 
 function App() {
   const base = import.meta.env.BASE_URL
@@ -9,7 +9,7 @@ function App() {
     <div className="h-screen w-screen">
       <Canvas
         className="bg-[#ffffff]"
-        camera={{ position: [0, 1, 6], fov: 68}}
+        camera={{ position: [0, 1, 6], fov: 65}}
       >
         <ambientLight intensity={1.5} />
 
@@ -21,32 +21,32 @@ function App() {
 
   {/* Center album */}
 <Playlist
-  position={[0, 0.15, 0.15]}
-  cover={`${base}covers/rainbows.webp`}
+  position={[0, 0.15, 0.9]}
+  cover={`${base}roundedcovers/rainbows-circle.webp`}
 />
 
 <group
-  position={[-1, 0, -0.5]}
+  position={[-1.2, 0, -0.5]}
   rotation={[0, 0.7, 0]}
 >
   <Playlist
     position={[0, 0, 0]}
-    cover={`${base}covers/rainbows.webp`}
+    cover={`${base}roundedcovers/rainbows-circle.webp`}
   />
 </group>
 
 {/* Right album */}
 <group
-  position={[1, 0, -0.5]}
+  position={[1.2, 0, -0.5]}
   rotation={[0, -0.7, 0]}
 >
   <Playlist
     position={[0, 0, 0]}
-    cover={`${base}covers/rainbows.webp`}
+    cover={`${base}roundedcovers/rainbows-circle.webp`}
   />
 </group>
       </Canvas>
-      <Song  />
+    
     </div>
   )
 }
