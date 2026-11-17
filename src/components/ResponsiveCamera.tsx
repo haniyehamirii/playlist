@@ -1,15 +1,30 @@
+
 import { PerspectiveCamera } from "@react-three/drei"
 import { useThree } from "@react-three/fiber"
+import { useLayoutEffect, useRef } from "react"
+import type { PerspectiveCamera as PerspectiveCameraType } from "three"
 
+const ResponsiveCamera = ({
+  position,
+}: {
+  position: [number, number, number]
+}) => {
+  const { size } = useThree()
+  const cameraRef = useRef<PerspectiveCameraType>(null)
 
-const ResponsiveCamera = () => {
+  const isPhone = size.width < 440
 
-    const {size} = useThree()
+  useLayoutEffect(() => {
+    cameraRef.current?.lookAt(0, 0, 0)
+  }, [position])
 
-
-    const isPhone = size.width < 440 
   return (
-    <PerspectiveCamera makeDefault position={[0,0,7]} fov={isPhone ? 65 : 45} />
+    <PerspectiveCamera
+      ref={cameraRef}
+      makeDefault
+      position={position}
+      fov={isPhone ? 70 : 45}
+    />
   )
 }
 

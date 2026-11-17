@@ -9,14 +9,14 @@ const PlaylistPage = () => {
   return (
   <div className="h-screen w-screen">
       <Canvas>
-         <ResponsiveCamera />
+         <ResponsiveCamera position={[0,0,7]} />
 
          <ambientLight intensity={1.5} />
          <directionalLight position={[3,8,5]} intensity={2}/>
         
          {playlistData.map((song) =>
            <group key={song.id}
-             position={song.position}
+             position={song.positionPlaylist}
              rotation={song.rotation}
              >
              <Playlist cover={`${base}${song.coverSong}`} /> 
