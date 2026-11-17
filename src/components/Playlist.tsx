@@ -1,21 +1,20 @@
 
 import { Html, RoundedBox, Text, useTexture } from "@react-three/drei"
+import { useThree } from "@react-three/fiber";
 import { FaCirclePlay } from "react-icons/fa6";
 
 
-type playlistProps = {
-  position: [number, number, number]
-  cover: string
-}
 
-const Playlist = ({ position, cover }: playlistProps) => {
+const Playlist = ({cover}: {cover: string}) => {
   const coverSong = useTexture(cover)
-  
+  const {size} = useThree()
+  const isPhone = size.width < 440
+
   return (
-    <group position={position}>
+    <group position={[0,0,0]}>
      
       <RoundedBox
-        args={[1.5,1.7,0.2]}
+        args={[1.5,1.8,0.2]}
         radius={0.099}
         smoothness={4}
       >
@@ -23,7 +22,7 @@ const Playlist = ({ position, cover }: playlistProps) => {
       </RoundedBox>
      
 
-     <Text position={[0, 0.7,0.3]} fontSize={0.08} fontWeight='bold'>
+     <Text position={[0, 0.7,0.3]} fontSize={0.08} fontWeight='bold' >
        Radiohead
      </Text>
    
@@ -36,8 +35,8 @@ const Playlist = ({ position, cover }: playlistProps) => {
       toneMapped={false}
      />
    </mesh>
-   <Html position={[1.7,-0.4,0.4]}>
-    <FaCirclePlay size={24} color="#fff" />
+   <Html position={[1.7,0.1,0.4]}>
+    <FaCirclePlay size={isPhone ? 17 : 32} color="#fff" />
    </Html>
     
   
@@ -48,7 +47,7 @@ const Playlist = ({ position, cover }: playlistProps) => {
 
  {/* Progress track */}
    <RoundedBox
-    args={[1, 0.025, 0.02]}
+    args={[1.1, 0.030, 0.02]}
     radius={0.01}
     smoothness={4}
     position={[0, -0.6, 0.15]}

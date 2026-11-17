@@ -1,6 +1,6 @@
 import type { song } from "../types/song";
 
-export const playlist : song[] = [
+export const playlistData : song[] = [
     {
         id: 1,
         title: 'The Rainbows',
@@ -8,7 +8,9 @@ export const playlist : song[] = [
         coverAlbum: '/covers/rainbows.webp',
         coverSong: '/roundedcovers/rainbows-circle.webp',
         songName: ['Weird Fish', 'All I Need', 'Nude'],
-        audio: ['songs/radiohead/weird-fish.mp3','songs/radiohead/nude.mp3','songs/radiohead/all-i-need.mp3']
+        audio: ['songs/radiohead/weird-fish.mp3','songs/radiohead/nude.mp3','songs/radiohead/all-i-need.mp3'],
+        position: [0, 0.15, 0.9],
+        rotation: [0,0,0]
     },
     {
         id: 2,
@@ -17,7 +19,9 @@ export const playlist : song[] = [
         coverAlbum: '/covers/crybaby.webp',
         coverSong: '/roundedcovers/crybaby-circle.webp',
         songName: ['Crybaby', 'Ghost Girl', 'Nineteen'],
-        audio: ['songs/lilpeep/crybaby.mp3','songs/lilpeep/ghost-girl.mp3','songs/lilpeep/nineteen.mp3']
+        audio: ['songs/lilpeep/crybaby.mp3','songs/lilpeep/ghost-girl.mp3','songs/lilpeep/nineteen.mp3'],
+        position: [-1.2, 0, -0.7],
+        rotation: [0, 0.7, 0]
     },
     {
         id: 3,
@@ -26,6 +30,8 @@ export const playlist : song[] = [
         coverAlbum: '/covers/mentalissue.webp',
         coverSong: '/roundedcovers/mentalissue-circle.webp',
         songName: ['ADHD', 'Anxiety', 'Paranoid'],
-        audio: ['songs/mvshreghi/ADHD.mp3','songs/mvshreghi/anxiety.mp3','songs/mvshreghi/paranoid.mp3']
+        audio: ['songs/mvshreghi/ADHD.mp3','songs/mvshreghi/anxiety.mp3','songs/mvshreghi/paranoid.mp3'],
+         position: [1.2, 0, -0.7],
+        rotation: [0,-0.7,0]
     }
 ]

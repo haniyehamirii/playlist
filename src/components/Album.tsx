@@ -7,14 +7,13 @@ type albumProps = {
     title:string
     artist: string
     cover: string
-    position: [number,number,number]
 }
 
-const Album = ({title,artist,cover,position}:albumProps) => {
+const Album = ({title,artist,cover}:albumProps) => {
 
   const [isHovered, setIsHovered] = useState<boolean>(false)
   const albumCover = useTexture(cover)
-  const groupRef = useRef<THREE.Mesh>(null)
+  const groupRef = useRef<THREE.Group>(null)
 
 useFrame((state) => {
   if (!groupRef.current) return
@@ -23,9 +22,8 @@ useFrame((state) => {
 })
 
   return (
-    <group ref={groupRef} position={position}>
+    <group ref={groupRef} position={[0,0,0]}>
       
-    
        <RoundedBox
          onPointerEnter={(event) => (event.stopPropagation(), setIsHovered(true))}
          onPointerLeave={() => setIsHovered(false)}
