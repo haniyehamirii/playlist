@@ -9,8 +9,9 @@ export const playlistData : song[] = [
         coverSong: '/roundedcovers/rainbows-circle.webp',
         songName: ['Weird Fish', 'All I Need', 'Nude'],
         audio: ['songs/radiohead/weird-fish.mp3','songs/radiohead/nude.mp3','songs/radiohead/all-i-need.mp3'],
-        position: [0, 0.15, 0.9],
-        rotation: [0,0,0]
+        positionPlaylist: [0, 0.15, 0.9],
+        rotation: [0,0,0],
+        positionAlbum: [0,1.8,0]
     },
     {
         id: 2,
@@ -20,8 +21,10 @@ export const playlistData : song[] = [
         coverSong: '/roundedcovers/crybaby-circle.webp',
         songName: ['Crybaby', 'Ghost Girl', 'Nineteen'],
         audio: ['songs/lilpeep/crybaby.mp3','songs/lilpeep/ghost-girl.mp3','songs/lilpeep/nineteen.mp3'],
-        position: [-1.2, 0, -0.7],
-        rotation: [0, 0.7, 0]
+        positionPlaylist: [-1.2, 0, -0.7],
+        rotation: [0, 0.7, 0],
+        positionAlbum:[0,0.7,0]
+        
     },
     {
         id: 3,
@@ -31,7 +34,8 @@ export const playlistData : song[] = [
         coverSong: '/roundedcovers/mentalissue-circle.webp',
         songName: ['ADHD', 'Anxiety', 'Paranoid'],
         audio: ['songs/mvshreghi/ADHD.mp3','songs/mvshreghi/anxiety.mp3','songs/mvshreghi/paranoid.mp3'],
-         position: [1.2, 0, -0.7],
-        rotation: [0,-0.7,0]
+        positionPlaylist: [1.2, 0, -0.7],
+        rotation: [0,-0.7,0],
+        positionAlbum: [0,-0.8,0]
     }
 ]

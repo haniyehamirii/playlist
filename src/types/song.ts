@@ -6,8 +6,9 @@ export type song = {
     coverSong: string
     songName: string[]
     audio: string[]
-    position: [number,number,number]
+    positionPlaylist: [number,number,number]
     rotation: [number,number,number]
+    positionAlbum: [number,number,number]
 }
 
 

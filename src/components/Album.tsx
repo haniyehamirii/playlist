@@ -7,9 +7,10 @@ type albumProps = {
     title:string
     artist: string
     cover: string
+    position: [number,number,number]
 }
 
-const Album = ({title,artist,cover}:albumProps) => {
+const Album = ({title,artist,cover,position}:albumProps) => {
 
   const [isHovered, setIsHovered] = useState<boolean>(false)
   const albumCover = useTexture(cover)
@@ -22,7 +23,7 @@ useFrame((state) => {
 })
 
   return (
-    <group ref={groupRef} position={[0,0,0]}>
+    <group ref={groupRef} position={position}>
       
        <RoundedBox
          onPointerEnter={(event) => (event.stopPropagation(), setIsHovered(true))}
